@@ -39,12 +39,12 @@ CJK文字、絵文字、混合コンテンツを適切に処理するUnicode対�
 ### コンパクト型（Consolidate）
 必要最小限のパディングでテーブルをコンパクトに整形します。
 
-![Consolidate Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/blob/main/images/ConsolidateMode.gif)
+![Consolidate Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/raw/main/images/ConsolidateMode.gif)
 
 ### バランス型（Evenly Distributed）
 Unicode対応の幅計算により、美しくバランスの取れた列を作成します。
 
-![Evenly Distributed Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/blob/main/images/EvenlyDistributedMode.gif)
+![Evenly Distributed Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/raw/main/images/EvenlyDistributedMode.gif)
 
 ## 更新履歴
 

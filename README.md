@@ -39,12 +39,12 @@ To enable automatic formatting on save:
 ### Consolidate Mode
 Minimal padding for token efficiency and compact tables.
 
-![Consolidate Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/blob/main/images/ConsolidateMode.gif)
+![Consolidate Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/raw/main/images/ConsolidateMode.gif)
 
 ### Evenly Distributed Mode
 Balanced columns with proper Unicode-aware width calculation.
 
-![Evenly Distributed Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/blob/main/images/EvenlyDistributedMode.gif)
+![Evenly Distributed Mode Example](https://github.com/RyuzakiShinji/unicode-table-formatter/raw/main/images/EvenlyDistributedMode.gif)
 
 ## Change Log
 
