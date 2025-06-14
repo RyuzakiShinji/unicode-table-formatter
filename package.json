@@ -1,0 +1,103 @@
+{
+  "name": "unicode-table-formatter",
+  "displayName": "Unicode Table Formatter",
+  "description": "Format markdown tables with full Unicode and font-width awareness.",
+  "version": "0.0.1",
+  "publisher": "Ryuzaki",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyuzakiShinji/unicode-table-formatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RyuzakiShinji/unicode-table-formatter/issues"
+  },
+  "homepage": "https://github.com/RyuzakiShinji/unicode-table-formatter#readme",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": ["markdown"],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "unicode-table-formatter.formatConsolidate",
+        "title": "Format Tables (Consolidate)",
+        "category": "Unicode Table Formatter"
+      },
+      {
+        "command": "unicode-table-formatter.formatEvenlyDistributed",
+        "title": "Format Tables (Evenly Distributed)",
+        "category": "Unicode Table Formatter"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "unicode-table-formatter.formatConsolidate",
+        "key": "ctrl+shift+alt+c",
+        "mac": "cmd+shift+alt+c",
+        "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "unicode-table-formatter.formatEvenlyDistributed",
+        "key": "ctrl+shift+alt+e",
+        "mac": "cmd+shift+alt+e",
+        "when": "editorTextFocus && editorLangId == markdown"
+      }
+    ],
+    "configuration": {
+      "title": "Unicode Table Formatter",
+      "properties": {
+        "unicodeTableFormatter.fontWidthRatio": {
+          "type": "string",
+          "default": "1:2",
+          "description": "Font width ratio for half-width:full-width characters (e.g., '1:2', '2:3', '1:1'). Half-width must be ≤ full-width.",
+          "pattern": "^\\d+:\\d+$"
+        },
+        "unicodeTableFormatter.defaultMode": {
+          "type": "string",
+          "enum": [
+            "consolidate",
+            "evenly-distributed"
+          ],
+          "default": "evenly-distributed",
+          "description": "Default formatting mode for format-on-save"
+        },
+        "unicodeTableFormatter.formatOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable automatic table formatting on save"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  }
+}
